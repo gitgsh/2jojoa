@@ -9,7 +9,7 @@ import Update from "./Update";
 import List from "./List";
 
 function App() {
-  let [데이터임, 데이터변경임] = useState([""]);
+  let [dd, 데이터dd변경임] = useState([""]);
   useEffect(() => {
     // componentDidMount
     // 컴포넌트가 화면에 나타날 때 실행하고 싶은 함수를 이 곳에 넣는다.
