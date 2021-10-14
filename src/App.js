@@ -8,6 +8,8 @@ import Input from "./Input";
 import Update from "./Update";
 import List from "./List";
 
+수정사항1
+
 function App() {
   let [데이타, 데이타임] = useState([""]);
   let [데이터임, 데이터변경임] = useState([""]);
