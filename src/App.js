@@ -48,6 +48,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        진아수정중
         <Route exact path="/">
           <button>
             <Link to="/input" className="input">
