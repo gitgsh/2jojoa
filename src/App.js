@@ -11,6 +11,7 @@ import List from "./List";
 수정사항1
 
 function App() {
+  // 지혜지요요요
   let [데이타, 데이타임] = useState([""]);
   let [데이터임, 데이터변경임] = useState([""]);
   useEffect(() => {
