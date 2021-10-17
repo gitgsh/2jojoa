@@ -8,7 +8,7 @@ import Input from "./Input";
 import Update from "./Update";
 import List from "./List";
 
-수정사항1
+수정사항12
 
 function App() {
   // 지혜지요요요
