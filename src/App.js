@@ -9,6 +9,11 @@ import Update from "./Update";
 import List from "./List";
 
 function App() {
+  const [searchKeyword, setSerchKeyword] = useState("");
+  const [keyField, seKkeyField] = useState("");
+
+  let [데이터임, 데이터변경임] = useState([""]);
+
   useEffect(() => {
     // componentDidMount
     // 컴포넌트가 화면에 나타날 때 실행하고 싶은 함수를 이 곳에 넣는다.
@@ -26,6 +31,7 @@ function App() {
         console.log("아작스요청 실패함", err);
       });
   }, []);
+
   const changeData = (result) => {
     console.log("App의 changeData ...");
     //console.log(data);
@@ -42,18 +48,35 @@ function App() {
     데이터변경임([...dataA]);
     // updateData={updateData}
   }; //
-
+  const onChange = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+    if (name === "searchKeyword") {
+      setSerchKeyword(value);
+    }
+    if (name === "keyField") {
+      seKkeyField(value);
+    }
+  };
   return (
     <div className="App">
       <header className="App-header">
         <Route exact path="/">
+          <div>
+            검색:
+            <input type="text" name="searchKeyword" onChange={onChange} />
+          </div>
           <button>
             <Link to="/input" className="input">
               글쓰기
             </Link>
           </button>
 
-          <List 데이터임={데이터임} />
+          <List
+            데이터임={데이터임}
+            searchKeyword={searchKeyword}
+            keyField={keyField}
+          />
         </Route>
 
         <Route path="/detail/:seq" component={Detail}>
